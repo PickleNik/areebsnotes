@@ -1,4 +1,5 @@
 ---
+import ChapterOne from "../216/ch1.astro";
 ---
 
 <html lang="en">
@@ -10,11 +11,13 @@
     <title>Astro</title>
   </head>
   <body>
-    <header class="fixed top-0 z-50 flex w-full p-2">
+    <!-- <header class="sticky top-0 z-50 mt-12 flex w-full p-2">
       <nav
         class="mx-auto flex rounded-3xl border border-neutral-400 bg-[#e6e4e0] bg-opacity-50 p-4 backdrop-blur-sm"
       >
-        <h1 class="ml-1 mr-24 font-serif text-3xl font-bold">Areeb's Notes</h1>
+        <div class="ml-1 mr-24 pt-[0.125rem] font-serif text-3xl font-bold">
+          Areeb's Notes
+        </div>
         <a class="mx-4 my-auto underline">216</a>
         <a class="mx-4 my-auto underline">330</a>
         <a class="mx-4 my-auto underline">351</a>
@@ -35,55 +38,19 @@
           </div>
         </div>
       </nav>
-    </header>
-    <main class="mx-auto max-w-screen-md p-4 pt-24">
-      <h1 class="font-mono text-6xl font-black text-neutral-700">Lecture 01</h1>
-      <h3 class="mb-4 font-mono text-2xl text-neutral-400">January 26th</h3>
-      <article class="relative mt-4" style="line-height: 2rem;">
-        <h2
-          class="absolute -left-24 top-2 flex h-16 w-16 items-center justify-center rounded-2xl bg-[#e6e4e0] font-serif text-4xl font-black text-green-950"
+    </header> -->
+    <main class="mx-auto max-w-screen-md p-4 pt-12">
+      <!-- <div class="font-mono text-6xl font-black text-neutral-700">
+        Lecture 01
+      </div>
+      <div class="mb-4 font-mono text-2xl text-neutral-400">January 26th</div> -->
+      <article class="relative mt-4">
+        <!-- <div
+          class="absolute -left-24 top-2 flex h-16 w-16 cursor-pointer items-center justify-center rounded-2xl bg-[#e6e4e0] font-serif text-4xl font-black text-green-950"
         >
           1
-        </h2>
-        <b>Data Storage and instructions</b>
-        <br />
-        Basic C Programming in Emacs: Compile, Debug, & VCS Data Storage and instructions
-        Bit - single binary digit Byte - group of 8 bits Words - how many bytes get
-        sent back and forth If you look at memory, it will be numbers and binary,
-        how different programs will ask system to treat things Interpretation of
-        the contents of machine words System bus All internal PC parts are connected
-        by a bus Amount of bits that goes through depends on the amount of bits.
-        32 bits = 32 wires What is machine language? The only language a computer
-        can understand Machine specific (different for every type of CPU) Sequential
-        execution of instructions by default What is Assembly language? A more human
-        readable form of machine language because it uses words or abbreviations
-        for operations Has to be converted to machine language Assembler converts
-        assembly language to machine language to be run How are high level languages
-        executed? Through a compiler A compiler converts a high-level language to
-        machine language Hardware CPU → Central Processing Unit Does all calculations
-        and computations Main memory - long list of locations that can store data
-        and instructions Broken up into words size which are group bytes, every memory
-        in location has unique address Registers Stores data, fast access location
-        inside the CPU itself Mass storage and remote storage SSD, Hard drive etc…
-        Registers are faster than memory so why don’t we make computers out of registers?
-        A computer has the least number of registers than anything else More cache
-        than registers, but not as fast as registers More memory than there are cache,
-        but not as fast cache The memory hierarchyManages the computer's resources
-        Protects the computers from misuse Provides abstraction and mechanisms so
-        that programs can (safely) manipulate the hardware and run on different hardware.
-        Processes Process - a running program (one or more threads of control), along
-        with all the data associated with it. (an address space) The operating system
-        uses context switching to give the appearance of multiple processes executing
-        at once on a single processor C vs Java C has No classes or objects No notion
-        of a current object No inheritance No generics No overloading No overriding
-        No reference/object dichotomy No garbage collection No exceptions Other than
-        that it’s just like Java :D More comparison C is typically fully compiled
-        (to machine code) not interpreted or compiled to bytecode like java Java
-        uses a Virtual Machine so it’s designed for programs to work the same regardless
-        of Operating System, program will run the same anywhere C is designed to
-        work differently on different machines or different Operating Systems C is
-        designed to facilitate direct manipulation of memory Things to Note
-        <img src="data.png" class="mt-4 rounded-3xl shadow-sm" />
+        </div> -->
+        <ChapterOne />
       </article>
     </main>
   </body>
@@ -93,5 +60,12 @@
   html,
   body {
     background-color: #eeeff1;
+  }
+</style>
+
+<style is:global>
+  iframe,
+  img {
+    @apply mx-auto my-4 rounded-2xl shadow-lg;
   }
 </style>
